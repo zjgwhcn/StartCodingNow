@@ -2,43 +2,21 @@
 #! -*- coding:utf-8 -*-
 
 class Solution(object):
-    def reverse(self,x):
-        ret = 0
-        flag = 1
+    def reverse(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
         if x < 0:
-            flag = -1
-            x *= -1
-        while(x!=0):
-            ret = ret*10+x%10
-            x = x/10
-        return ret*flag
-        '''
-        if x < 0:
-            flag = -1
-        else:
-            flag = 1
-        t = str(abs(x))
-        L = []
-        for i in t:
-            L.append(i)
-        b = L[-1]
-        for j in range(2,len(t)+1):
+            return -self.reverse(-x)
 
-            a = L[-j]
-            b += a
-        b = int(b)
+        result = 0
+        while x:
+            result = result * 10 + x % 10
+            x /= 10
+        return result if result <= 0x7fffffff else 0  # Handle overflow.
 
-        return b*flag
-'''
-def main():
-    a = int(input('input:'))
-    s = Solution()
-    a = s.reverse(a)
-    print (a)
 
-if __name__ == '__main__':
-    main()
-
-'''
-fail???????????????????????
-'''
+if __name__ == "__main__":
+    print Solution().reverse(123)
+    print Solution().reverse(-321)
