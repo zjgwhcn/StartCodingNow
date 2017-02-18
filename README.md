@@ -10,3 +10,5 @@
 + [leetcode:Reverse_Integer](https://github.com/louchaooo/StartCodingNow/blob/master/Reverse_Integer.py)
 
 + [leetcode:two_sum](https://github.com/louchaooo/StartCodingNow/blob/master/two_sum.py)
+
++ [一些爬虫tips](https://github.com/louchaooo/StartCodingNow/blob/master/spider_mode.py)
